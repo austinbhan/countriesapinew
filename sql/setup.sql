@@ -14,9 +14,10 @@ CREATE TABLE countries (
 INSERT INTO 
 countries (country, capitol, spoken_language, continent, population)
 VALUES
-('United States', 'Washington DC', 'English', 'North America', 335999183 ),
-('United Kingdom', 'London', 'English', 'North America', 67081234 ),
+('United States', 'Washington DC', 'English', 'North America', 335999183),
+('United Kingdom', 'London', 'English', 'North America', 67081234),
 ('India', 'New Dehli', 'Hindi', 'Asia', 1414940553),
 ('Romania', 'Bucharest', 'Romanian', 'Europe', 18907736),
 ('China', 'Beijing', 'Chinese', 'Asia', 1453629085),
-('Mexico', 'Mexico City', 'Spanish', 'Europe', 132150971);
+('Mexico', 'Mexico City', 'Spanish', 'North America', 132150971),
+('South Africa', 'Johannesburg', 'Afrikaans', 'Africa', 61254923);
