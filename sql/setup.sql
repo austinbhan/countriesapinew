@@ -15,7 +15,7 @@ INSERT INTO
 countries (country, capitol, spoken_language, continent, population)
 VALUES
 ('United States', 'Washington DC', 'English', 'North America', 335999183),
-('United Kingdom', 'London', 'English', 'North America', 67081234),
+('United Kingdom', 'London', 'English', 'Europe', 67081234),
 ('India', 'New Dehli', 'Hindi', 'Asia', 1414940553),
 ('Romania', 'Bucharest', 'Romanian', 'Europe', 18907736),
 ('China', 'Beijing', 'Chinese', 'Asia', 1453629085),
