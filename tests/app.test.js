@@ -30,4 +30,20 @@ describe('backend-express-template routes', () => {
       population: 67081234
     });
   });
+
+  it('#POST /countries should create a new country', async () => {
+    const newCountry = {
+      country: 'Venezuela',
+      capitol: 'Caracas',
+      spoken_language: 'Spanish',
+      continent: 'South America',
+      population: 28226853
+    };
+    const resp = await request(app).post('/countries').send(newCountry);
+    expect(resp.status).toBe(200);
+    expect(resp.body).toEqual({
+      id: expect.any(String),
+      ...newCountry,
+    });
+  });
 });
