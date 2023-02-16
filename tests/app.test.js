@@ -46,4 +46,11 @@ describe('backend-express-template routes', () => {
       ...newCountry,
     });
   });
+  it('#PUT /dictators/:id should update an existing dictator', async () => {
+    const resp = await request(app).put('/countries/1').send({
+      country: 'This has been updated',
+    });
+    expect(resp.status).toBe(200);
+    expect(resp.body.country).toBe('This has been updated');
+  });
 });
