@@ -46,8 +46,8 @@ describe('backend-express-template routes', () => {
       ...newCountry,
     });
   });
-  it('#PUT /dictators/:id should update an existing dictator', async () => {
-    const resp = await request(app).put('/countries/1').send({
+  it('#PUT /country/:id should update an existing country', async () => { // Currently 500
+    const resp = await request(app).put('/countries/1').send({ // Removing ID gives 404
       country: 'This has been updated',
     });
     expect(resp.status).toBe(200);
