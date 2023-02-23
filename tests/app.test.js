@@ -46,11 +46,20 @@ describe('backend-express-template routes', () => {
       ...newCountry,
     });
   });
-  it('#PUT /country/:id should update an existing country', async () => { // Currently 500
-    const resp = await request(app).put('/countries/1').send({ // Removing ID gives 404
+
+  it('#PUT /countries/:id should update an existing country', async () => { 
+    const resp = await request(app).put('/countries/1').send({ 
       country: 'This has been updated',
     });
     expect(resp.status).toBe(200);
     expect(resp.body.country).toBe('This has been updated');
+  });
+
+  it('#DELETE /countries/:id should delete a country', async () => {
+    const resp = await request(app).delete('/countries/4');
+    expect(resp.status).toBe(200);
+
+    const countryResp = await request(app).get('/countries/4');
+    expect(countryResp.body).toBe(null);
   });
 });
